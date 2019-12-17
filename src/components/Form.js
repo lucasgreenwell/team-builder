@@ -1,11 +1,21 @@
 import React, { useState } from "react";
+import team from "../data";
 
-const Form = () => {
+const Form = props => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [role, setRole] = useState("");
   return (
-    <form>
+    <form onSubmit={e => {
+        console.log(name, email, role)
+        e.preventDefault();
+        props.setTeam([...props.team, {
+            name: name,
+            email: email,
+            role: role
+        }])
+        console.log(props.team);
+    }}>
       <label>Name</label>
       <input
         type="text"

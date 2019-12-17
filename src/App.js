@@ -12,13 +12,13 @@ function App() {
     <div className="App">
       <header className="App-header"></header>
 
-      <body>
+      {/* <body> */}
         {team.map(ele => {
           return <Card name={ele.name} role={ele.role} email={ele.email} />;
         })}
-        <Form/>
+        <Form setTeam={setTeam} team={team}/>
       
-      </body>
+      {/* </body> */}
 
     </div>
   );
