@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import team from "../data";
+// import team from "../data";
 
 const Form = props => {
   const [name, setName] = useState("");
@@ -16,7 +16,7 @@ const Form = props => {
         }])
         console.log(props.team);
     }}>
-      <label>Name</label>
+      <label>Name:  </label>
       <input
         type="text"
         onChange={e => {
@@ -26,7 +26,7 @@ const Form = props => {
       />
       <br />
 
-      <label>Email</label>
+      <label>Email: </label>
       <input
         type="text"
         onChange={e => {
@@ -36,7 +36,7 @@ const Form = props => {
       />
       <br />
 
-      <label>Role</label>
+      <label>Role:  </label>
       <input
         type="text"
         onChange={e => {
