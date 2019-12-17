@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import list from "./data";
+import Card from "./components/cards";
+import Form from "./components/Form"
 
 function App() {
+  const [team, setTeam] = useState(list);
+
+  console.log();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header"></header>
+
+      <body>
+        {team.map(ele => {
+          return <Card name={ele.name} role={ele.role} email={ele.email} />;
+        })}
+        <Form/>
+      
+      </body>
+
     </div>
   );
 }
