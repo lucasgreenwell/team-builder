@@ -1,5 +1,14 @@
+.card-place{
+  margin: 5%;
+}
+.form{
+  display: flex;
+  flex-wrap: wrap;
+}
 
-
+.formEle{
+  width: 35%;
+}
 
 .App {
   text-align: center;
